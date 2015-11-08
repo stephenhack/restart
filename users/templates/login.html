@@ -1,0 +1,25 @@
+{% include "cdn.html" %}
+{% load staticfiles %}
+<body class="login_body">
+    <h1><img src="{% static 'Drawing.png' %}"></img></h1>
+    <div class="container">
+        <form class="login_form" action="{% url 'login'%}" method="POST">
+            {% csrf_token %}
+            <div class="row">
+                <div class="input-field col s6">
+                    <input type="text" name="username"/>
+                    <label for="username">username</label>
+                </div>
+                <div class="input-field col s6">
+                    <input type="password" name="password"/>
+                    <label for="password">password</label>
+                </div>
+            </div>
+
+
+            <div class="button-holder">
+                <input type="submit" name="submit" value="login"/>
+            </div>
+        </form>
+    </div>
+</body>

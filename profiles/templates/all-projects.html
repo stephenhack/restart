@@ -1,0 +1,20 @@
+{% include "header.html" %}
+
+<h2 class="center-align">All Profiles</h2>
+<div class="container">
+    <div class="row">
+        {% for vet in vets %}
+        <div class="col s12 m6">
+            <div class="card teal lighten-3 hoverable">
+                <div class="card-content black-text">
+                    <span class="card-title black-text">{{vet.name}}</span>
+                    <p>{{vet.story}}</p>
+                </div>
+                <div class="card-action">
+                    <a href="{% url 'detail' vet.id %}" class="red-text">See More</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>

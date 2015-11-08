@@ -1,0 +1,43 @@
+{% load staticfiles %}
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/css/materialize.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/js/materialize.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $(".dropdown-button").dropdown();
+        });
+    </script>
+</head>
+
+<header>
+    <nav>
+        <div class="nav-wrapper">
+            <a href="/profiles" class="brand-logo">Restart</a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="{% url 'all-profiles' %}">Projects</a></li>
+                <li><a href="/profiles/charities">Charities</a></li>
+                <li><a href="{% url 'new' %}">Add Your Story</a></li>
+                {% if user.is_authenticated != True %}
+                    <li><a href="/users/register">Sign Up</a></li>
+                    <li><a href="/users/login">Log in</a></li>
+                {% endif %}
+                {% if user.is_authenticated %}
+                    
+                    <ul id="dropdown1" class="dropdown-content">
+                      <li><a href="#!">Profile</a></li>
+                      <li class="divider"></li>
+                      <li><a href="{% url 'logout'%}">Log out</a></li>
+                    </ul>
+                    <li><a class="dropdown-button" href="#!" data-activates="dropdown1">{{user.username}}<i class="material-icons right">arrow_drop_down</i></a></li>
+                    
+                {% endif %}
+                
+            </ul>
+        </div>
+    </nav>
+</header>

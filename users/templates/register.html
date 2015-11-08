@@ -1,0 +1,33 @@
+{% include "cdn.html" %}
+{% load staticfiles %}
+<h1>Register with <img src="{% static 'Drawing.png'%}"></img></h1>
+
+<body class="login_body">
+    <div class="container">
+        <form class="register_form" method="post" action="/users/register/">
+
+        {% csrf_token %}
+        <div class="row">
+            <div class="input-field col s4">
+                <input type="text" name="username"/>
+                <label for="username">username</label>
+            </div>
+            <div class="input-field col s4">
+                <input type="text" name="email"/>
+                <label for="email">email</label>
+            </div>
+            <div class="input-field col s4">
+                <input type="password" name="password"/>
+                <label for="password">password</label>
+            </div>
+    
+            <div class="button-holder">
+                <input type="submit" name="submit" value="register"/>
+            </div>
+        </div>
+        
+    </form>
+    </div>
+    
+</body>
+

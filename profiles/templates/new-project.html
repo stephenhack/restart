@@ -1,0 +1,47 @@
+{% include "header.html" %}
+
+<h2 class="center-align">Add Your Story</h2>
+<div class="container">
+    <div class="row">
+        <form class="col s12 add-story" action="{% url 'new' %}" method="POST">
+            {% csrf_token %}
+            <div class="row">
+                <div class="input-field col s6">
+                    <input name="first_name" type="text" class="validate">
+                    <label for="first_name">First Name</label>
+                </div>
+                <div class="input-field col s6">
+                    <input name="last_name" type="text" class="validate">
+                    <label for="last_name">Last Name</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <textarea name="description" class="materialize-textarea"></textarea>
+                    <label for="textarea1">Description</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s6">
+                    <input name="email" type="email" class="validate">
+                    <label for="email">Email</label>
+                </div>
+                <div class="input-field col s6">
+                    <input type="text" name="image" value="">
+                    <label for="image">Upload Story Image</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s6">
+                    <input type="text" name="duration" placeholder="yyyy-yyyy">
+                    <label for="service-start">Duration of Service</label>
+                </div>
+                <div class="input-field col s6">
+                    <input type="text" name="goal" placeholder="0.00">
+                    <label for="service-end">Desired Funds</label>
+                </div>
+            </div>
+            <input type="submit" name="submit-story" value="Submit Story">
+        </form>
+    </div>
+</div>

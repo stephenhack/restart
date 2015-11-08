@@ -1,0 +1,108 @@
+body {
+  background: #e0e0e0; }
+
+nav {
+  background-color: #0277bd; }
+
+.project-header {
+  margin-top: 10px;
+  margin-bottom: 50px; }
+
+.project-description .card {
+  width: 100%; }
+.project-description button {
+  display: block;
+  margin-top: 50px; }
+
+.FAQ {
+  margin-top: 100px; }
+
+select {
+  display: block;
+  color: black; }
+
+.charities {
+  margin-left: 280px; }
+
+h2 {
+  margin-bottom: 50px; }
+
+.col img {
+  width: 50%;
+  height: 50%; }
+
+.project-description button {
+  background: #0277bd;
+  color: white;
+  border: 1px solid black; }
+
+.login_body {
+  background-color: white; }
+  .login_body h1 {
+    color: #0277bd;
+    text-align: center;
+    margin-top: 10%;
+  }
+  .login_body form {
+    margin-top: 20px; }
+  .login_body img {
+    width: 275px;
+    height: 250px;
+  }
+    .login_body form input[type="text"], .login_body form input[type="password"] {
+      color: #0277bd;
+      border-color: #0277bd; }
+    .login_body form label {
+      color: #0277bd; }
+     .button-holder {
+      text-align: center; }
+      .button-holder input[type="submit"] {
+        width: 100px;
+        border-radius: 10%;
+        border: 1px solid #0277bd;
+        margin-top: 10px;
+        background-color: white;
+        color: #0277bd; }
+        .button-holder input[type="submit"]:hover {
+          background-color: #0277bd;
+          color: white;
+          border-color: white;
+          -webkit-transition: all 0.4s;
+          -moz-transition: all 0.4s;
+          transition: all 0.4s; }
+          
+        .brand-logo {
+          margin-left: 10px;
+        }
+
+.logo{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+}
+
+.profileHeader{
+  display: block;
+  margin-left: 10%;
+  margin-top: 50px;
+}
+
+.slogan{
+  display: block;
+  margin-left: 50%;
+  margin-top: -75px;
+}
+
+.person{
+  display:block;
+  width:100%;
+  height:100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.s4 p {
+  margin-top: 224px;
+  margin-left: 92px;
+}
